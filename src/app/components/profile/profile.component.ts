@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
 
   showProgram() : void {
     this.displayProgram = true;
+    this.displayFavorites = false;
   }
 
   hideProgram() : void {
@@ -25,6 +26,8 @@ export class ProfileComponent implements OnInit {
 
   showFavorites() : void {
     this.displayFavorites = true;
+    this.displayProgram = false;
+
   }
 
   hideFavorites() : void {
