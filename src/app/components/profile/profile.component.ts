@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   displayProgram: boolean = false;
+  displayFavorites: boolean = false;
   user: string = 'Lisa'
 
   constructor() { }
@@ -20,5 +21,13 @@ export class ProfileComponent implements OnInit {
 
   hideProgram() : void {
     this.displayProgram = false;
+  }
+
+  showFavorites() : void {
+    this.displayFavorites = true;
+  }
+
+  hideFavorites() : void {
+    this.displayFavorites = false;
   }
 }

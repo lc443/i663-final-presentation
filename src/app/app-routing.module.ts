@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './components/profile/favorites/favorites.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProgramComponent } from './components/profile/program/program.component';
-import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,11 +20,11 @@ const routes: Routes = [
     path: 'profile', component: ProfileComponent,
     children: [
       { path: 'program', component: ProgramComponent },
-      { path: 'favorites', component: FavoritesComponent },
-      { path: 'update-profile', component: UpdateProfileComponent }
+      { path: 'favorites', component: FavoritesComponent }
     ]
   },
   { path: 'about', component: AboutComponent },
+      { path: 'update', component: UpdateProfileComponent }
 ];
 
 @NgModule({

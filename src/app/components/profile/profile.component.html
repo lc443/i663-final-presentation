@@ -26,7 +26,7 @@
                   <app-program></app-program>
                 </div>
                 <p *ngIf="!displayProgram" class="card-text mb-0">
-                  This holds your workout programs. The ones that you have already started as well as others that you can quickly look through.
+                  This holds your workout programs that you have already started.
                 </p>
               </div>
               
@@ -37,14 +37,14 @@
                 </div>
               </div>
             </div>
-            <div>
-              <div class="show-and-hide-b-program-button">
+            <div class="show-and-hide-b-program-button">
+              <div>
                 <div *ngIf="displayProgram"> 
-                  <button (click)="hideProgram()" class="btn btn-primary mt-2">Hide Workout Program</button>
+                  <button (click)="hideProgram()" class="btn btn-primary mt-2">Hide Program</button>
                 </div>
               </div>
               <div *ngIf="!displayProgram">
-                <button (click)="showProgram()" class="btn btn-primary mt-2">View Workout Program</button>
+                <button (click)="showProgram()" class="btn btn-primary mt-2">Show Program</button>
               </div>
             </div>
           </div>
@@ -58,10 +58,13 @@
               <div class="card-body p-4">
                 <a
                   class="text-decoration-none link-dark stretched-link"
-                  href="#!"
+                 
                   ><h4 class="card-title mb-5">Favorites</h4></a
                 >
-                <p class="card-text mb-0">
+                <div *ngIf="displayFavorites">
+                  <app-favorites></app-favorites>
+                </div>
+                <p *ngIf="!displayFavorites" class="card-text mb-0">
                  You can see workouts that you have liked in the past
                 </p>
               </div>
@@ -71,6 +74,16 @@
                     
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="show-and-hide-b-favs-button">
+              <div>
+                <div *ngIf="displayFavorites"> 
+                  <button (click)="hideFavorites()" class="btn btn-primary mt-2">Hide Favorites</button>
+                </div>
+              </div>
+              <div *ngIf="!displayFavorites">
+                <button (click)="showFavorites()" class="btn btn-primary mt-2">Show Favorites</button>
               </div>
             </div>
           </div>
@@ -83,7 +96,7 @@
               <div class="card-body p-4">
                 <a
                   class="text-decoration-none link-dark stretched-link"
-                  href="#!"
+                  routerLink="/update"
                   ><h4 class="card-title mb-5">Update Profile</h4></a
                 >
                 <p class="card-text mb-0">

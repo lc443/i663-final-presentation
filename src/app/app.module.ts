@@ -18,7 +18,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProgramComponent } from './components/profile/program/program.component';
 import { FavoritesComponent } from './components/profile/favorites/favorites.component';
-import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+
 
 @NgModule({
   declarations: [
