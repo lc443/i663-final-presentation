@@ -22,7 +22,10 @@
               ></div>
               <div class="card-body p-4">
                 <h4 class="card-title stretched-link mb-5">Workout Program</h4>
-                <p class="card-text mb-0">
+                <div *ngIf="displayProgram">
+                  <app-program></app-program>
+                </div>
+                <p *ngIf="!displayProgram" class="card-text mb-0">
                   This holds your workout programs. The ones that you have already started as well as others that you can quickly look through.
                 </p>
               </div>
@@ -35,12 +38,12 @@
               </div>
             </div>
             <div>
-              <div>
-                <div *ngIf="display"> 
+              <div class="show-and-hide-b-program-button">
+                <div *ngIf="displayProgram"> 
                   <button (click)="hideProgram()" class="btn btn-primary mt-2">Hide Workout Program</button>
                 </div>
               </div>
-              <div *ngIf="!display">
+              <div *ngIf="!displayProgram">
                 <button (click)="showProgram()" class="btn btn-primary mt-2">View Workout Program</button>
               </div>
             </div>
@@ -96,11 +99,10 @@
               </div>
             </div>
           </div>
-          <div *ngIf="display">
-            <app-program></app-program>
-          </div>
-          
         </div>
+ <!--Genberating new components on Click-->
+        
+        
         <!-- Call to action-->
       
       </div>

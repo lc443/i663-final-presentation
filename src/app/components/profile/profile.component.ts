@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  display: boolean = false;
+  displayProgram: boolean = false;
   user: string = 'Lisa'
 
   constructor() { }
@@ -15,10 +15,10 @@ export class ProfileComponent implements OnInit {
   }
 
   showProgram() : void {
-    this.display = true;
+    this.displayProgram = true;
   }
 
   hideProgram() : void {
-    this.display = false;
+    this.displayProgram = false;
   }
 }
