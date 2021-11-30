@@ -1,0 +1,95 @@
+
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+.jumbotron {
+    margin-bottom: 0;
+    background-color: #fff;
+}
+.section-container{
+    padding:  0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 13rem;  
+    flex-wrap: wrap;
+}
+
+.body-section {
+    background-color: #F8F9FA;
+}
+.section-text{
+    flex: 1;
+    padding:  1rem 2rem;
+    font-size: 2.3rem; 
+    cursor: pointer;
+    margin-right: 1rem;
+}   
+.bg-image-back {
+    background-image: url("../../../assets/img/back.jpg");
+    background-size: cover;
+    opacity: 0.8;
+}
+.bg-image-shoulders {
+    background-image: url("../../../assets/img/shoulders.jpg");
+    background-size: cover;
+    opacity: 0.8;
+}
+.bg-image-chest {
+    background-image: url("../../../assets/img/chest.jpg"); 
+    background-size: cover; 
+    opacity: 0.8;
+}
+.bg-image-biceps {
+    background-image: url("../../../assets/img/biceps.jpg"); 
+    background-size: cover; 
+    opacity: 0.8;
+}
+.bg-image-triceps {
+    background-image: url("../../../assets/img/triceps.jpg"); 
+    background-size: cover; 
+    opacity: 0.8;
+}
+.bg-image-legs {
+    background-image: url("../../../assets/img/glutes.jpg"); 
+    background-size: cover; 
+    opacity: 0.8;
+}
+.bg-image-quadriceps {
+    background-image: url("../../../assets/img/quadriceps.jpg"); 
+    background-size: cover; 
+    opacity: 0.8;
+}
+
+.bg-image-abs {
+    background-image: url("../../../assets/img/abs.jpg");
+    background-size: cover;
+    opacity: 0.8;
+}
+.section-text div{
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 700;
+    margin-top: 3rem;
+    transition: 0.5s;
+    color: #1D1D1F;
+}
+
+.section-text div:hover{
+    opacity: 1;
+    transform: scale(1.29);
+    filter:blur(0px);
+}
+
+.section-text :hover{
+
+    filter:blur(0px);
+}
+
+.picture-container {
+    width: 100%;
+    opacity: 0.6;
+    
+}
+

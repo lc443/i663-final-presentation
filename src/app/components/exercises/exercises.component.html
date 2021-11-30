@@ -1,0 +1,100 @@
+<app-exercises-nav></app-exercises-nav>
+<section class="py-5 px">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-5 mb-4">
+            <div class="exercises-header">
+                <div>Exercises</div>
+            </div>
+        </h1>
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-2">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-lg-5">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2" style="margin-right: 0.5rem;">
+                                Guide</div>
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Fitness</div>
+                            <div class="h2 fw-bolder">How to use the library</div>
+                            <p>When you click the Display More button, the list of exercises will populate, and you can
+                                browse excercises through the list as well as you can search exercises by typing in the
+                                search filter</p>
+                            <a class="stretched-link text-decoration-none" href="#!">
+                                Read more
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="bg-featured-blog"
+                            style="background-image: url('https://dummyimage.com/700x350/343a40/6c757d')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center px-5">
+        <br>
+        <button *ngIf="clicked == false" class="btn btn-primary display-button" type="button"
+            (click)="displayButton()">Display Exercises</button>
+        <div *ngIf="clicked == true">
+            <button class="btn btn-primary text-center" type="button" (click)="hideButton()">Hide Exercises</button>
+            <div class="container">
+                <div class="input-group search-input">
+                    <div class=" col-sm-2">
+                        <input class="form-control border-end-0 border" type="text" [(ngModel)]="searchText"
+                            autocomplete="on" placeholder="Search..." id="example-search-input">
+                    </div>
+                    <button class="btn btn-outline-secondary border-start-0 border " type="button">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="clicked == true" class="exercise-container" >
+            
+            <div  *ngIf="exercises.length > 0" [exercises]="exercises"
+                [displayExercises]="displayExercises" [loadMoreClicked]="loadMoreClicked.asObservable()"
+                [focusRecord]="focusRecord">
+                <div class="exercises-items" *ngFor="let exercise of exercises| filter: searchText">      
+                    <div class="py-3">
+                        <div class="container-wdith container px-5 my-0">
+                          <div class="row gx-5">
+                            <div class="col-lg-4 mb-0">
+                              <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                  <a
+                                    class="text-decoration-none link-dark stretched-link"
+                                    href="#!"
+                                    ><h5 class="card-title mb-2">{{exercise.exerciseName}}</h5></a
+                                  >
+                                  <h6 class="card-text mb-4">
+                                    {{exercise.categoryName}}
+                                  </h6>
+                                  <p class="card-text mb-0">
+                                    This holds your workout programs. The ones that you have already started as well as others that you can quickly look through.
+                                  </p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                  <div class="d-flex align-items-end justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>        
+                          </div>
+                          <!-- Call to action-->
+                        
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" *ngIf="exercises.length > 0" (click)="loadMore()">Load More</button>
+            <div *ngIf="exercises.length == 0" class="container text-center no-more-exercises">
+                <div> No More Exercises To Display</div>
+            </div>
+        </div>
+    </div>
+</section>

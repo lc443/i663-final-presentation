@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5 mt-3">
+        <a class="navbar-brand" href="index.html">Fitr</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ml-5">
+                <li class="nav-item"><a class="nav-link" routerLink="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/exercises">Exercises</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/contact">Contact</a></li>
+                
+                
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+<section>
+  <div class="py-5" id="features">
+    <div class="container px-5 my-5">
+        <div class="col-lg-8">
+            <h2 class="mb-5">Sign Up</h2>
+            <div class="col-lg-8 mb-5 mb-lg-0">
+              <div class="row gx-5 border rounded-end">
+                <form class="m-4">
+                  <div class="form-row ">
+                    <div class="form-group col-md-6">
+                      <label for="inputfirst" class="mb-2">Member Id</label>
+                      <input
+                        type="first"
+                        class="form-control mb-3"
+                        id="inputEmail4"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputfirst" class="mb-2">First Name</label>
+                        <input
+                          type="first"
+                          class="form-control mb-3"
+                          id="inputEmail4"
+                          placeholder="Email"
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputlast" class="mb-2">Last Name</label>
+                        <input
+                          type="last"
+                          class="form-control mb-3"
+                          id="inputEmail4"
+                          placeholder="Email"
+                        />
+                      </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4" class="mb-2">Email</label>
+                      <input
+                        type="email"
+                        class="form-control mb-3"
+                        id="inputEmail4"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4" class="mb-2">Password</label>
+                      <input
+                        type="password"
+                        class="form-control mb-5"
+                        id="inputPassword4"
+                        placeholder="Password"
+                      />
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mb-5" (click)="signIn()">Sign Up</button>
+                  
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
