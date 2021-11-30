@@ -19,6 +19,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProgramComponent } from './components/profile/program/program.component';
 import { FavoritesComponent } from './components/profile/favorites/favorites.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
     ProgramComponent,
     FavoritesComponent,
     UpdateProfileComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
