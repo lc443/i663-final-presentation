@@ -5,18 +5,26 @@ import { ExercisesComponent } from './components/exercises/exercises.component';
 import { SignInComponent } from './components/forms/sign-in/sign-in.component';
 import { SignUpComponent } from './components/forms/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
+import { FavoritesComponent } from './components/profile/favorites/favorites.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProgramComponent } from './components/profile/program/program.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 
-const routes: Routes = [ 
-{ path: '', component: HomeComponent },
-{ path: 'home', component: HomeComponent },
-{ path: 'exercises', component: ExercisesComponent },
-{ path: 'sign-in', component: SignInComponent },
-{ path: 'sign-up', component: SignUpComponent },
-{ path: 'profile', component: ProfileComponent },
-{ path: 'about', component: AboutComponent },
-
-
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'exercises', component: ExercisesComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  {
+    path: 'profile', component: ProfileComponent,
+    children: [
+      { path: 'program', component: ProgramComponent },
+      { path: 'favorites', component: FavoritesComponent },
+      { path: 'update-profile', component: UpdateProfileComponent }
+    ]
+  },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

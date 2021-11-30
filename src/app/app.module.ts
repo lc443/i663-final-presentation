@@ -16,6 +16,9 @@ import { SignInComponent } from './components/forms/sign-in/sign-in.component';
 import { SignUpComponent } from './components/forms/sign-up/sign-up.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProgramComponent } from './components/profile/program/program.component';
+import { FavoritesComponent } from './components/profile/favorites/favorites.component';
+import { UpdateProfileComponent } from './components/profile/update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { AboutComponent } from './components/about/about.component';
     SignUpComponent,
     ProfileComponent,
     AboutComponent,
+    ProgramComponent,
+    FavoritesComponent,
+    UpdateProfileComponent,
   ],
   imports: [
     BrowserModule,
