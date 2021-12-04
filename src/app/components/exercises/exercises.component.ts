@@ -31,7 +31,11 @@ export class ExercisesComponent implements OnInit {
       exerciseName: 'Shoulder Press',
       categoryName: 'Shoulders'
     },
-    {}
+    {
+      id: 4,
+      exerciseName: 'Lateral Row',
+      categoryName: 'Back'
+    }
 
   ]
   exercise: Exercise = new Exercise();
