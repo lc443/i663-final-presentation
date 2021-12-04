@@ -20,6 +20,7 @@ import { ProgramComponent } from './components/profile/program/program.component
 import { FavoritesComponent } from './components/profile/favorites/favorites.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ContactComponent } from './components/contact/contact.component';
     FavoritesComponent,
     UpdateProfileComponent,
     ContactComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

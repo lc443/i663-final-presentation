@@ -13,7 +13,27 @@ export class ExercisesComponent implements OnInit {
   showMore = true;
   searchText;
   displayedExercises: Exercise[] = [];
-  exercises: Exercise[];
+  //exercises: Exercise[];
+  exercises = [
+    {
+      id: 1,
+      exerciseName: 'Pull Up',
+      categoryName: 'Upper Body',
+      exerciseDescription: ''
+    },
+    {
+      id: 2,
+      exerciseName: 'Chest Press',
+      categoryName: 'Chest'
+    },
+    {
+      id: 3,
+      exerciseName: 'Shoulder Press',
+      categoryName: 'Shoulders'
+    },
+    {}
+
+  ]
   exercise: Exercise = new Exercise();
   clicked = false;
   filteredExercises: Exercise[] = [];
@@ -21,22 +41,23 @@ export class ExercisesComponent implements OnInit {
   focusRecord: number = 0;
   loadMoreClicked: Subject<number> = new Subject<number>();
   
+  
   constructor(private route: ActivatedRoute, private exerciseService: ExerciseService, private router: Router) { }
   ngOnInit(): void {
-    this.getExercises()
+    //this.getExercises()
   }
 
-  getExercises(): Exercise[]{
-    this.showMore = false;
-    this.exerciseService.getExercises().pipe(
-    ).subscribe(
-      data => this.exercises = data.sort((a, b)=>{
-        return a.categoryName  == b.categoryName?0:a.categoryName > b.categoryName? 1:-11
-      }),
-      error => console.log(error)
-    );
-    return this.exercises;
-  }
+  // getExercises(): Exercise[]{
+  //   this.showMore = false;
+  //   this.exerciseService.getExercises().pipe(
+  //   ).subscribe(
+  //     data => this.exercises = data.sort((a, b)=>{
+  //       return a.categoryName  == b.categoryName?0:a.categoryName > b.categoryName? 1:-11
+  //     }),
+  //     error => console.log(error)
+  //   );
+  //   return this.exercises;
+  // }
 
 
   hideButton(): void {
