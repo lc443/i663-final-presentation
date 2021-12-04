@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  private user: string = 'admin'
+  public user: string = 'admin'
 
   constructor() { }
 
