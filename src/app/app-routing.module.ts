@@ -15,7 +15,7 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'exercises', component: ExercisesComponent },
+  { path: 'blog', component: ExercisesComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   {
